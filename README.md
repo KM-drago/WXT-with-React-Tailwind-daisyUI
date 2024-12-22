@@ -43,3 +43,31 @@ Clear App.css and add the Tailwind directives to your CSS
 ```
 
 Clear the style.css file to remove predefined styles.
+
+# Adding daisyUI
+
+Followning [https://daisyui.com/docs/install/](https://daisyui.com/docs/install/)
+
+### Install
+
+```
+pnpm add -D daisyui@latest
+```
+
+### Config
+
+Update tailwind.config.js, Notice that only change is the `plugins: [require("daisyui")],` line
+
+#### tailwind.config.js
+
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./entrypoints/popup/index.html", "./entrypoints/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [require("daisyui")],
+};
+
+```
